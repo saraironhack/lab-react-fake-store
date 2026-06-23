@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://fakestoreapi.com/products")
+      .get('https://fakestoreapi.com/products')
       .then((response) => {
         setProducts(response.data);
       })
@@ -31,7 +31,7 @@ function ProductListPage() {
               alt={product.title}
               className="h-48 w-full object-contain mb-4"
             />
-            <h2 className="text-lg font-semibold mb-2 line-clamp-2">
+            <h2 className="text-lg font-bold mb-2 line-clamp-2">
               {product.title}
             </h2>
             <p className="text-blue-600 font-bold">${product.price}</p>
