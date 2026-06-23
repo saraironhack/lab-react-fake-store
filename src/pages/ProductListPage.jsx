@@ -29,7 +29,7 @@ function ProductListPage() {
             <img
               src={product.image}
               alt={product.title}
-              className="h-48 w-full object-contain mb-4"
+              className="h-48 w-full object-contain mb-2"
             />
             <h2 className="text-lg font-bold mb-2 line-clamp-2">
               {product.title}
